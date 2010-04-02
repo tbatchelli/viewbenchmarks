@@ -55,8 +55,8 @@
   "viewbenchmarks/template.html"
   [num-items] 
   [:ul.times-table :li] (clone-for [n (range 1 num-items)]
-                                   #(at % [:li]
-                                        (content (str n " * 9 = " (* 9 n))))))
+                                   [:li]
+                                   (content (str n " * 9 = " (* 9 n)))))
 
 
 (defn enlive-benchmark [num-items]
